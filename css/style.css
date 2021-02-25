@@ -1,0 +1,726 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+ul,ol {
+    list-style-type: none;
+}
+.clr {
+    clear: both;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+/*===== Nav Part Goes Here=======*/
+
+nav{
+   width:100%;
+   position: fixed;
+   top:0;
+   left:0;
+   z-index: 999;
+}
+.nav-main{
+    display:flex;
+}
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+
+.logo{
+    width:200px;
+    padding-top: 28px;
+   
+}
+.menu{
+    width:1000px;
+    text-align: right;
+}
+
+.menu ul li{
+   
+    display: inline-block;
+    padding-left: 56px;
+   
+}
+.menu ul li a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 80px;
+    color:#ffffff;
+    text-transform: uppercase;
+    transition: all linear 0.4s;
+    position: relative;
+}
+
+.menu ul li a:hover{
+    color:#fce38a;
+}
+
+.menu ul li a::after{
+    position: absolute;
+    content: "";
+    width:0%;
+    height:3px;
+    left:0;
+    bottom:-12px;
+    background:#fce38a;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+.menu ul li a:hover::after{
+   opacity: 1;
+   width:100%;
+}
+
+/*===== Banner Part Goes Here=======*/
+
+.banner-image{
+    position: relative;
+   background:url(../images/banner.png);
+    background-size:cover;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.banneroverly{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227,  138,0.9));
+    display:flex;
+    justify-content: center;
+}
+
+.banner-text {
+    align-self: center;
+}
+
+.banner-text h2 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 72px;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	
+}
+.banner-text h1{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 150px;
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding:0 50px;
+    position: relative;
+    padding-bottom: 140px;
+}
+
+.banner-text h1::after{
+    position: absolute;
+    content: '';
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:60px;
+    height:3px;
+    background: #fff;
+   
+
+}
+.banner-btn {
+    margin: 0 auto;
+    text-align: center;
+  
+   
+}
+.banner-btn a{
+    border:3px solid #fff;
+    padding:12px 30px;
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color:#fff;
+}
+
+
+/*===== About Part Goes Here=======*/
+
+#about{
+    padding-top: 65px;
+  
+}
+.heading{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 105px;
+}
+.heading h2{
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color:#333333;
+   padding-bottom: 2px;
+  
+}
+
+.heading h1{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#333333;
+    position: relative;
+}
+.heading h1::after{
+    position:absolute;
+    content: "";
+    left: 50%;
+    bottom:-30px;
+    transform: translateX(-50%);
+    width:60px;
+    height:3px;
+    background: #f38181;
+   
+}
+.heading p{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color:#999999;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0px 100px;
+    padding-top: 62px;
+}
+.about-main{
+    display:flex;
+    justify-content:space-between;
+    padding-bottom: 84px;
+}
+.about-item{
+    width:380px;
+    position: relative;
+   
+}
+.about-overly{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227,  138,0.9));
+    display:flex;
+    justify-content:center;
+    opacity: 0;
+    transition: all linear 0.4s;
+   
+}
+.about-text{
+    text-align: center;
+    align-self: center;
+}
+.about-text i{
+    font-size: 33px;
+    color:#fff;
+}
+.about-text h3{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#fff;
+}
+.about-item:hover .about-overly{
+    opacity: 1;
+}
+/*===== Namber Count Part Goes Here=======*/
+
+#number-count{
+    background: #95e1d3;
+   
+
+   
+}
+
+.number-main{
+    display:flex;
+    justify-content:space-around;
+    padding-top: 53px;
+    padding-bottom: 53px;
+    text-align: center;
+}
+
+.number-item h2{
+    font-size: 72px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.number-item p{
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+   
+    text-transform: uppercase;
+    color:#fff;
+}
+
+
+/*===== Servics Part Goes Here=======*/
+
+#servics .heading{
+    
+padding-bottom: 105px;
+    
+padding-top: 80px;
+}
+.servics-main{
+    display:flex;
+    justify-content:space-around;
+}
+.servics-item{
+    display:flex;
+    width:340px;
+    height: 150px;
+    justify-content:space-between;
+}
+.servics-left {
+    width:32px;
+    padding-right: 30px;
+  
+}
+.servics-right{
+    width:274px;
+}
+.servics-right h2{
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:#333;
+    padding-bottom: 10px;
+   
+}
+.servics-right p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color:#999999;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/*===== Feedback Part Goes Here=======*/
+
+#feedback{
+    background:#f8f8f8;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  
+}
+.feedback-main{
+    width:968px;
+    margin:0 auto;
+    display:flex;
+    
+}
+.feed-icon{ 
+     width:144px;
+        margin-right: 60px;
+      height: 144px;
+      border:3px solid #95e1d3;
+      text-align: center;
+      display:flex;
+    justify-content:center;
+}
+.feed-icon img{
+  
+    align-self: center;
+
+
+}
+.feed-text{
+    width:764px;
+
+}
+.feed-text p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    color:#999999;
+    font-style:italic;
+}
+.feed-text h5{
+    padding-left: 70px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 500;
+    font-size: 24px;
+    color:#333333;
+   padding-top: 6px;
+    position: relative;
+}
+.feed-text h5::after{
+    position: absolute;
+    content: "";
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    background: #f38181;
+    width:60px;
+    height: 3px;
+}
+#feedback i{
+    font-size: 21px;
+    color:#cfcfcf;
+}
+.feed{
+    position: relative;
+}
+.left{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+}
+.right{
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+}
+
+/*===== Team Part Goes Here=======*/
+
+#team .heading{
+
+    padding-top: 70px;
+}
+.team-main{
+    display:flex;
+    justify-content:space-between;
+
+}
+.team-iteam{
+    width:380px;
+    text-align: center;
+}
+.team-img{
+    position: relative;
+}
+.social-icon i{
+    width:56px;
+    height:56px;
+    line-height: 56px;
+    text-align: center;
+    background: #fce38a;
+    font-size:26px;
+    color:#f38181;
+    margin-right: -3px;
+    transition: all linear 0.4s;
+   
+}
+.social-icon i:hover{
+    color: #ffffff;
+}
+.team-overly{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227,  138,0.9));
+    display:flex;
+    justify-content:center;
+    opacity: 0;
+   display:flex;
+   
+   transition: all linear 0.4s;
+}
+.team-iteam:hover .team-overly{
+    opacity: 1;
+}
+.social-icon{
+    align-self: center;
+}
+.team-info h4{
+    
+    padding-top: 25px;
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:#333;
+    padding-bottom:7px;
+}
+.team-info p{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-style: 15px;
+    font-weight: 300;
+    color:#999999;
+}
+
+/*===== Gallary Part Goes Here=======*/
+
+
+#gallary .heading{
+    padding-top: 74px;
+    padding-bottom: 74px;
+}
+
+.gal-main{
+    display:flex;
+}
+
+.gal-iteam{
+    width:25%;
+}
+ .gal-img{
+      position: relative;
+      line-height: 0;
+  }
+
+
+  .gal-overly{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227,  138,0.9));
+    display:flex;
+    justify-content:center;
+    opacity: 0;
+   display:flex;
+   
+   transition: all linear 0.4s;
+}
+
+.gal-img:hover .gal-overly{
+    opacity: 1;
+}
+.gal-overly-content{
+    text-align: center;
+    color:#ffffff;
+    align-self: center;
+}
+.gal-overly-content i{
+    font-size: 30px;
+    padding-bottom: 18px;
+}
+.gal-overly-content h4{
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.gal-overly-content p{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-style: 15px;
+    font-weight: 300;
+   padding-top: 28px;
+}
+
+
+/*===== Footer Part Goes Here=======*/
+
+
+#footer{
+    background: #f8f8f8;
+  
+   padding-top: 56px;
+  
+}
+
+.footer-main{
+    display: flex;
+    justify-content:space-between;
+    padding-bottom: 52px;
+    border-bottom: 1px solid#e5e5e5;
+}
+
+
+
+.footer-left{
+    width:465px;
+}
+.footer-center{
+    width:350px;
+}
+.footer-right{
+    width:270px;
+}
+.footer-left p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color:#999999;
+    padding-top: 26px;
+    padding-bottom: 35px;
+}
+.footer-left h4{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color:#333333;
+    padding-bottom: 10px;
+}
+.footer-left span{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color:#333333;
+}
+.footer-left h4{
+    border-bottom: 1px solid #e5e5e5;
+}
+.footer-social{
+    padding-top: 12px;
+    display:flex;
+}
+.footer-social i{
+    font-size: 17px;
+    margin-left: 15px;
+    color:#95e1d3;
+}
+.footer-social h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: italic;
+    color:#999999;
+    text-transform: capitalize;
+}
+.email-form{
+    padding-top: 15px;
+  position: relative;
+}
+form{
+    position: relative;
+}
+form input{
+    height:30px;
+    width:380px;
+    border:1px solid #e7e7e7;
+    padding-left: 12px;
+}
+form input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    color:#cccccc;
+}
+
+.form-btn{
+    padding:8px 34px;
+    border:none;
+    background-color: #95e1d3;
+    position: absolute;
+    top: 13px;
+    right:0;
+}
+.form-btn a{
+    color:#ffffff;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.footer-center h2{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#333333;
+    padding-bottom: 30px;
+}
+.center-main{
+    display:flex;
+    justify-content:space-between;
+    padding-bottom: 20px;
+}
+.center-iteam-left{
+    width:120px;
+
+}
+.center-iteam-right{
+    width:210px;
+}
+
+.center-iteam-right p{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color:#333333;
+    padding-top: 10px;
+}
+.center-iteam-right h6{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    font-style: italic;
+    color:#999999;
+    padding-top: 5px;
+}
+.footer-right h3{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#333333;
+    padding-bottom: 30px;
+}
+.footer-right-main{
+    display:flex;
+    flex-wrap: wrap;
+}
+.footer-right-iteam{
+    width:33%;
+}
+.view-btn a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    font-style: italic;
+    color:#333333;
+}
+.view-btn{
+    padding-top: 10px;
+}
+
+
+.copy-right{
+    text-align: center;
+    line-height: 46px;
+}
+
+.copy-right h5{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color:#333333;
+}
+.copy-right span{
+    color:#f38181;
+}
+
+
+/*===== Team Part Goes Here=======*/
+/*===== Team Part Goes Here=======*/
